@@ -1,0 +1,7 @@
+The three commands that you will use to push your documents to github 
+are:
+
+git add . # Add the file to the tracker
+git commit -m "Added files"
+git push 
+
