@@ -1,0 +1,54 @@
+Sub Stock_Volume()
+       
+Dim ticker As String
+Dim ticket_total As Double
+
+
+ticket_total = 0
+
+Dim ticker_Row As Integer
+ ticker_Row = 2
+ 
+ Dim ws As Worksheet
+ Range("H1") = "Ticker Name"
+ Range("I1") = "Total Stock Volume"
+
+ 
+
+'Loop through all Stock Volumes
+
+For Each ws In Worksheets
+   ws.Activate
+   
+
+For i = 2 To 70926
+
+If Cells(i + 1, 1).Value <> Cells(i, 1).Value Then
+
+ticker = Cells(i, 1).Value
+
+
+
+ticker_total = ticker_total + Cells(i, 7).Value
+Range("H" & ticker_Row).Value = ticker
+
+
+Range("I" & ticker_Row).Value = ticker_total
+
+ticker_Row = ticker_Row + 1
+
+ticker_total = 0
+
+Else
+
+ticker_total = ticker_total + Cells(i, 7).Value
+
+End If
+
+Next i
+
+Next
+
+
+
+End Sub
