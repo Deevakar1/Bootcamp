@@ -1,0 +1,6 @@
+
+You must include a written description of three observable trends based on the data:
+
+- There are total 576 individual players with 183 unique items on purchase.
+- 84% of the population are Male players out of 576 total players
+- Age group 20-24 are the highest age group of player in this dataset. they account for around 45% of the poplulation.
